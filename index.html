@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Executive Bobcat Code</title>
+    <link rel="icon" type="image/x-icon" href="Exe_logo.ico" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TRV27TM0Z9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TRV27TM0Z9");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P2HS56T8");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body style="background-color: #dedede">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P2HS56T8"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- <div class="position-relative"> -->
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <!-- <div class="tranlate-middle"> -->
+        <!-- <h1 class="mx-auto">Hello, world!</h1> -->
+        <!-- <div height="250px" width="500px"> -->
+        <img
+          src="Exe_logo.png"
+          class="rounded"
+          alt=""
+          srcset=""
+          height="200px"
+          width="200px"
+        />
+        <!-- </div> -->
+        <img
+          src="Bobcat logo GTA.png"
+          class="rounded"
+          alt=""
+          srcset=""
+          height="200px"
+          width="400px"
+        />
+      </div>
+      <!-- </div> -->
+      <div class="mb-5 mx-auto" style="width: 600px">
+        <div class="container">
+          <label for="InputText" class="form-label fs-5">Input Number</label>
+          <div class="row needs-validation">
+            <div class="col-6 was-validated:valid">
+              <input
+                type="text"
+                class="form-control"
+                id="InputText"
+                placeholder="212"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                type="button"
+                class="btn btn-primary fs-5"
+                onclick="generateData()"
+              >
+                Generate
+              </button>
+            </div>
+            <div class="col-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input b"
+                  type="checkbox"
+                  value=""
+                  id="sameNumberCheckbox"
+                />
+                <label class="form-check-label fs-6" for="sameNumberCheckbox">
+                  Same Number
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="container mb-5" id="numberContainer"></div>
+    <footer class="mb-5" style="height: 150px"></footer>
+  </body>
+  <script>
+    function validateForm() {
+      let x = document.forms["myForm"]["fname"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+    }
+    function generateData(value) {
+      let inputText = document.getElementById("InputText");
+      const checkBox = document.getElementById("sameNumberCheckbox").checked;
+
+      //inputValue = parseInt(inputText.value);
+      inputValue = inputText.value;
+      if (
+        //isNaN(inputValue) ||
+        //inputValue <= 0 ||
+        //inputText.value.length !== 3
+        !/^\d{3}$/.test(inputValue)
+      ) {
+        console.log("salah dek");
+        inputText.value = "";
+        return;
+      }
+      //console.log(checkBox);
+      //console.log(inputValue);
+      //console.log(typeof inputValue);
+      const arr = Array.from(inputValue);
+      console.log(arr);
+      const result = generateNumber(arr, checkBox);
+      console.log(result);
+      inputText.value = "";
+
+      insertHTML(result);
+    }
+
+    function insertHTML(array) {
+      let container = document.getElementById("numberContainer");
+      const rowHTML = `<div class="row align-items-start mb-3"></div>`;
+      const colHTML = `
+        <div class="col form-check form-switch position-relative">
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <input class="form-check-input btn-lg" type="checkbox" id="1" />
+              <label class="form-check-label fs-5 fw-bold" for="1">1</label>
+            </div>
+        </div>`;
+      const arr = array;
+      const jumpNumber = Math.round(array.length / 3);
+
+      container.innerHTML = "";
+      for (let i = 0; i < jumpNumber; i++) {
+        first = arr[i];
+        second = arr[i + jumpNumber];
+        third = arr[i + jumpNumber + jumpNumber];
+        temp = `
+            <div class="row align-items-start mb-4">
+                <div class="col form-check form-switch position-relative">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                    <input class="form-check-input btn-lg" type="checkbox" id="${first}" />
+                    <label class="form-check-label fs-5 fw-bold" for="${first}">${first}</label>
+                    </div>
+                </div>
+                <div class="col form-check form-switch position-relative">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                    <input class="form-check-input btn-lg" type="checkbox" id="${second}" />
+                    <label class="form-check-label fs-5 fw-bold" for="${second}">${second}</label>
+                    </div>
+                </div>
+                <div class="col form-check form-switch position-relative">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                    <input class="form-check-input btn-lg" type="checkbox" id="${third}" />
+                    <label class="form-check-label fs-5 fw-bold" for="${third}">${third}</label>
+                    </div>
+                </div>
+            </div>`;
+        container.innerHTML += temp;
+      }
+    }
+    function generateNumber(array, uniq = false) {
+      const result = [];
+      const arr = array;
+      const unique = uniq;
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+          for (let k = 0; k < arr.length; k++) {
+            let first = arr[i];
+            let second = arr[j];
+            let third = arr[k];
+
+            if (unique) {
+              if (first == second || first == third || second == third) {
+                continue;
+              }
+            }
+
+            temp = `${first}${second}${third}`;
+            check = result.find((v) => v == temp);
+            if (check) {
+              continue;
+            }
+            result.push([temp]);
+          }
+        }
+      }
+      return result;
+    }
+  </script>
+</html>

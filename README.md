@@ -9,4 +9,16 @@ Executive Bobcat Heist code generate
   
 [![website](https://img.shields.io/badge/website-1DA1F2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://oxibot.github.io/executive-bobcat-heist/)
 
+
+</div>
+
+
+## Screenshot
+
+contoh gambar code
+
+<div align='center'>
+
+![Bobcat Code](bobcat_code.png?raw=true "EZ DEEECK")
+
 </div>
